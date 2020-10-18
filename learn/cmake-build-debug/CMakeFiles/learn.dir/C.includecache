@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Applications/CS/C/c-learning-notes/learn/data_structure/stack.h
+
+/Applications/CS/C/c-learning-notes/learn/main.c
+stdio.h
+-
+string.h
+-
+data_structure/stack.h
+/Applications/CS/C/c-learning-notes/learn/data_structure/stack.h
+
