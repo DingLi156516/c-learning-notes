@@ -27,8 +27,8 @@ void stack_test() {
     stack_add(&node2);
     stack_add(&node3);
     stack_add(&node4);
-    struct Node* peek_value = stack_peek();
-    struct Node* pop_value = stack_pop();
+    struct Node *peek_value = stack_peek();
+    struct Node *pop_value = stack_pop();
     printf("peek value: %d\n", peek_value->data);
     printf("pop value: %d\n", pop_value->data);
     stack_destroy();
@@ -77,13 +77,13 @@ int main() {
     // strchr()
     char str[] = "The quick brown fox";
     char ch = 'q';
-    char* pGot_Char = NULL;
+    char *pGot_Char = NULL;
     pGot_Char = strchr(str, ch);
     printf("pGot_Char is : %c\n", *pGot_Char);
     // strstr()
     char str1[] = "The quick brown fox";
     char substr[] = "quick";
-    char* pFound = NULL;
+    char *pFound = NULL;
     pFound = strstr(str1, substr);
     printf("pGot_Char is : %s\n", pFound);
 

@@ -13,12 +13,12 @@ struct Node {
 /**
  * Global header for stack.
  */
-static struct Node* head;
+static struct Node *head;
 
 /**
  * current node.
  */
-static struct Node* tail;
+static struct Node *tail;
 
 /**
  * Init the stack;
@@ -35,13 +35,13 @@ void stack_add(struct Node *item);
  * peek the first item in the stack.
  * @return the first node to be popped.
  */
-struct Node* stack_peek();
+struct Node *stack_peek();
 
 /**
  * pop the first item in the stack.
  * @return popped node.
  */
-struct Node* stack_pop();
+struct Node *stack_pop();
 
 /**
  * Destroy the stack.
