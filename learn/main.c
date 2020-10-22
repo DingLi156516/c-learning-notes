@@ -87,6 +87,34 @@ int main() {
     pFound = strstr(str1, substr);
     printf("pGot_Char is : %s\n", pFound);
 
+    //pointer
+    int number = 99;
+    int *pNumber = &number;
+    int **ppNumber = &pNumber;
+    printf("number's value is %d\n", number);
+    printf("number's address is %p\n", pNumber);
+    printf("number's address's address is %p\n", ppNumber);
+    printf("number's address has %lu bytes\n", sizeof(pNumber));
+
+    long value = 100L;
+    const long *pValue = &value;
+    // the value pointed to must not be changed
+    // this will fail
+    // *pValue = 200L;
+    value = 200L;
+    // the pointer itself is not constant
+    long value1 = 300L;
+    pValue = &value1;
+
+    int value2 = 232L;
+    // the pointer itself can't be changed
+    int *const pValue2 = value2;
+    int value3 = 323L;
+    // will error out
+    // pValue2 = &value3;
+    *pValue2 = 2323L;
+
+
 }
 
 
