@@ -34,6 +34,16 @@ void stack_test() {
     stack_destroy();
 }
 
+void copyString(char *to, char *from) {
+    while (*from) {
+        *to++ = *from++;
+    }
+
+    *to = '\0';
+}
+
+int stringLength(const char *string);
+
 /**
  * main function to show some basic c concepts
  * @return
@@ -72,7 +82,7 @@ int main() {
     // random
     printf("Tax rate: %f\n", TAXRATE);
     enum color myColor = green;
-    printf("The enum value is %d\n", myColor);
+    printf("The enum value is %c\n", myColor);
 
     // strchr()
     char str[] = "The quick brown fox";
@@ -106,15 +116,53 @@ int main() {
     long value1 = 300L;
     pValue = &value1;
 
-    int value2 = 232L;
+    int value2 = 232;
     // the pointer itself can't be changed
-    int *const pValue2 = value2;
-    int value3 = 323L;
+    int *const pValue2 = &value2;
+    int value3 = 323;
     // will error out
     // pValue2 = &value3;
-    *pValue2 = 2323L;
+    *pValue2 = value3;
 
+    // void pointer
+    int i = 20;
+    float f = 2.34f;
+    char cha = 'k';
+    void *vP;
+    vP = &i;
+    printf("i's value is %d\n", *(int *)vP);
+    vP = &f;
+    printf("f's value is %f\n", *(float *)vP);
+    vP = &cha;
+    printf("cha's value is %c\n", *(char *)vP);
 
+    // pointers and arrays
+    int values[100] = {1, 2, 3};
+    int *valuesPr;
+    valuesPr = values;
+    printf("*valuesPr's value is %d\n", *valuesPr);
+    printf("valuesPr[1]'s value is %d\n", valuesPr[1]);
+    printf("*(valuesPr + 1)'s value is %d\n", *(valuesPr + 1));
+
+    int sum = 0;
+    for (int j = 0; j < sizeof(values) / sizeof(int); ++j) {
+        sum += valuesPr[j];
+    }
+    printf("sum's value is %d\n", sum);
+
+    //pointers and strings
+    char string1[] = "A String to be copied";
+    char string2[50];
+
+    copyString(string2, string1);
+    printf("string2's value is %s\n", string2);
+
+    printf("stringLength()'s value for \"string length test\" is %d\n", stringLength("string length test"));
 }
 
-
+int stringLength(const char *string) {
+    const char *lastAddress = string;
+    while (*lastAddress)
+        lastAddress++;
+    return (int)(lastAddress - string);
+}
