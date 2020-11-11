@@ -13,6 +13,8 @@ stdio.h
 -
 string.h
 -
+stdlib.h
+-
 data_structure/stack.h
 /Applications/CS/C/c-learning-notes/learn/data_structure/stack.h
 

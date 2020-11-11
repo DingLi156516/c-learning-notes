@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "data_structure/stack.h"
 
 #define TAXRATE 0.015
@@ -41,6 +42,8 @@ void copyString(char *to, char *from) {
 
     *to = '\0';
 }
+
+void swap(int *x, int *y);
 
 int stringLength(const char *string);
 
@@ -130,11 +133,11 @@ int main() {
     char cha = 'k';
     void *vP;
     vP = &i;
-    printf("i's value is %d\n", *(int *)vP);
+    printf("i's value is %d\n", *(int *) vP);
     vP = &f;
-    printf("f's value is %f\n", *(float *)vP);
+    printf("f's value is %f\n", *(float *) vP);
     vP = &cha;
-    printf("cha's value is %c\n", *(char *)vP);
+    printf("cha's value is %c\n", *(char *) vP);
 
     // pointers and arrays
     int values[100] = {1, 2, 3};
@@ -158,11 +161,33 @@ int main() {
     printf("string2's value is %s\n", string2);
 
     printf("stringLength()'s value for \"string length test\" is %d\n", stringLength("string length test"));
+
+    // pass by reference
+    int x = 1, y = 2;
+    printf("Before swap, x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After swap, x = %d, y = %d\n", x, y);
+
+    // malloc, realloc
+    char *string = (char *) malloc(15 * sizeof(char));
+    strcpy(string, "DingLi");
+    printf("string = %s, address = %p\n", string, string);
+
+    string = (char *) realloc(string, 25 * sizeof(char));
+    strcat(string, ".com");
+    printf("after realloc, string = %s, address = %p\n", string, string);
 }
 
 int stringLength(const char *string) {
     const char *lastAddress = string;
     while (*lastAddress)
         lastAddress++;
-    return (int)(lastAddress - string);
+    return (int) (lastAddress - string);
+}
+
+void swap(int *x, int *y) {
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 }
