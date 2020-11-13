@@ -176,6 +176,32 @@ int main() {
     string = (char *) realloc(string, 25 * sizeof(char));
     strcat(string, ".com");
     printf("after realloc, string = %s, address = %p\n", string, string);
+    free(string);
+
+    //structure
+    struct time {
+        int hour;
+        int minute;
+        int second;
+    };
+    struct date {
+        int month;
+        int day;
+        int year;
+        struct time theTime;
+    };
+    struct time newTime = {.hour = 13, .minute = 20, .second = 15};
+    struct date today = {.year = 2020, .month = 9, .day = 20, .theTime = newTime};
+    printf("today: %d-%d-%d, time is %d:%d:%d\n", today.year, today.month, today.day, today.theTime.hour,
+           today.theTime.minute, today.theTime.second);
+    today = (struct date) {9, 25, 2020};
+    printf("after change, today: %d-%d-%d, time is %d:%d:%d\n", today.year, today.month, today.day, today.theTime.hour,
+           today.theTime.minute, today.theTime.second);
+
+    struct date *datePr;
+    datePr = &today;
+    printf("datePr: %d-%d-%d, time is %d:%d:%d\n", datePr->year, datePr->month, datePr->day, datePr->theTime.hour,
+           datePr->theTime.minute, datePr->theTime.second);
 }
 
 int stringLength(const char *string) {
