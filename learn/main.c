@@ -202,6 +202,20 @@ int main() {
     datePr = &today;
     printf("datePr: %d-%d-%d, time is %d:%d:%d\n", datePr->year, datePr->month, datePr->day, datePr->theTime.hour,
            datePr->theTime.minute, datePr->theTime.second);
+
+    // access files
+    FILE *filePr = fopen("/Applications/CS/C/c-learning-notes/myfile.txt", "r");
+    if (filePr == NULL) {
+        perror("Error in opening file");
+        return -1;
+    }
+    char *readStr;
+    while (fgets(readStr, 40, filePr)) {
+        printf("%s", readStr);
+    }
+    printf("\n");
+    fclose(filePr);
+    filePr = NULL;
 }
 
 int stringLength(const char *string) {
