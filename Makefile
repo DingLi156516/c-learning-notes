@@ -1,4 +1,4 @@
-make: main.o stack.o
+make: clean main.o stack.o
 	cc -o executable main.o stack.o
 main.o:
 	cc -c learn/main.c

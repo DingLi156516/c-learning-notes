@@ -30,8 +30,16 @@ void stack_test() {
     stack_add(&node4);
     struct Node *peek_value = stack_peek();
     struct Node *pop_value = stack_pop();
+    struct Node *pop_value1 = stack_pop();
+    struct Node *pop_value2 = stack_pop();
+    struct Node *pop_value3 = stack_pop();
     printf("peek value: %d\n", peek_value->data);
     printf("pop value: %d\n", pop_value->data);
+    printf("pop value: %d\n", pop_value1->data);
+    printf("pop value: %d\n", pop_value2->data);
+    printf("pop value: %d\n", pop_value3->data);
+    printf("is empty: %s\n", isEmpty() ? "true" : "false");
+
     stack_destroy();
 }
 

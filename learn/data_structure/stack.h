@@ -1,6 +1,7 @@
 //
 // Created by 李鼎 on 7/6/20.
 //
+#include <stdbool.h>
 
 #ifndef LEARN_STACK_H
 #define LEARN_STACK_H
@@ -47,6 +48,11 @@ struct Node *stack_pop();
  * Destroy the stack.
  */
 void stack_destroy();
+
+/**
+ * if the stack is empty.
+ */
+bool isEmpty();
 
 #endif //LEARN_STACK_H
 

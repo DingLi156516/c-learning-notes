@@ -7,31 +7,35 @@
 
 void stack_init() {
     head = (struct Node *) malloc(sizeof(struct Node));
-    head->next = NULL;
+    tail = (struct Node *) malloc(sizeof(struct Node));
+    head->next = tail;
     head->data = 0;
-    tail = head;
+    tail->data = 0;
 }
 
 void stack_add(struct Node *node) {
-    if (tail == head) {
-        tail = node;
-        head->next = tail;
-    } else {
-        struct Node *temp = head->next;
-        head->next = node;
-        node->next = temp;
-    }
+    struct Node *temp = head->next;
+    head->next = node;
+    node->next = temp;
 }
 
 struct Node *stack_peek() {
-    return head->next;
+    if(head->next == tail) {
+        return NULL;
+    } else {
+        return head->next;
+    }
 }
 
 struct Node *stack_pop() {
-    struct Node *pop = head->next;
-    head->next = pop->next;
-    pop->next = NULL;
-    return pop;
+    if (head->next == tail) {
+        return NULL;
+    } else {
+        struct Node *pop = head->next;
+        head->next = pop->next;
+        pop->next = NULL;
+        return pop;
+    }
 }
 
 void stack_destroy() {
@@ -39,6 +43,10 @@ void stack_destroy() {
         struct Node *temp = head->next;
         head->next = temp->next;
     }
-    tail = NULL;
+    free(tail);
     free(head);
+}
+
+bool isEmpty() {
+    return head->next == tail;
 }

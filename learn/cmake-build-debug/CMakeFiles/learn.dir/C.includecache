@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Applications/CS/C/c-learning-notes/learn/data_structure/stack.h
+stdbool.h
+-
 
 /Applications/CS/C/c-learning-notes/learn/main.c
 stdio.h
