@@ -1,18 +1,17 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/Applications/CS/C/c-learning-notes/learn/data_structure/stack.c" "/Applications/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles/learn.dir/data_structure/stack.c.o"
-  "/Applications/CS/C/c-learning-notes/learn/increment.c" "/Applications/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles/learn.dir/increment.c.o"
-  "/Applications/CS/C/c-learning-notes/learn/main.c" "/Applications/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles/learn.dir/main.c.o"
-  "/Applications/CS/C/c-learning-notes/learn/negate.c" "/Applications/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles/learn.dir/negate.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "AppleClang")
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/stack.c" "CMakeFiles/learn.dir/data_structure/stack.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/stack.c.o.d"
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/string.c" "CMakeFiles/learn.dir/data_structure/string.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/string.c.o.d"
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/main.c" "CMakeFiles/learn.dir/main.c.o" "gcc" "CMakeFiles/learn.dir/main.c.o.d"
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/negate.c" "CMakeFiles/learn.dir/negate.c.o" "gcc" "CMakeFiles/learn.dir/negate.c.o.d"
   )
 
 # Targets to which this target links.

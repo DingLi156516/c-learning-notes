@@ -3,4 +3,4 @@ project(learn C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(learn main.c increment.c negate.c data_structure/stack.c data_structure/stack.h)
+add_executable(learn main.c negate.c data_structure/stack.c data_structure/stack.h data_structure/string.h data_structure/string.c)
