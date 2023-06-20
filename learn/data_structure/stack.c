@@ -47,6 +47,6 @@ void stack_destroy() {
     free(head);
 }
 
-bool isEmpty() {
+bool stack_isEmpty() {
     return head->next == tail;
 }

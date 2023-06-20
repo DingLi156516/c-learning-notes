@@ -76,6 +76,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c">
+			<Option target="learn"/>
+		</Unit>
+		<Unit filename="/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.h">
+			<Option target="learn"/>
+		</Unit>
+		<Unit filename="/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.c">
+			<Option target="learn"/>
+		</Unit>
+		<Unit filename="/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.h">
+			<Option target="learn"/>
+		</Unit>
 		<Unit filename="/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/stack.c">
 			<Option target="learn"/>
 		</Unit>

@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c" "CMakeFiles/learn.dir/data_structure/hashset.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/hashset.c.o.d"
+  "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.c" "CMakeFiles/learn.dir/data_structure/queue.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/queue.c.o.d"
   "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/stack.c" "CMakeFiles/learn.dir/data_structure/stack.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/stack.c.o.d"
   "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/string.c" "CMakeFiles/learn.dir/data_structure/string.c.o" "gcc" "CMakeFiles/learn.dir/data_structure/string.c.o.d"
   "/Applications/Old MAC/CS/C/c-learning-notes/learn/main.c" "CMakeFiles/learn.dir/main.c.o" "gcc" "CMakeFiles/learn.dir/main.c.o.d"

@@ -129,6 +129,54 @@ learn/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/build
 .PHONY : learn/fast
 
+data_structure/hashset.o: data_structure/hashset.c.o
+.PHONY : data_structure/hashset.o
+
+# target to build an object file
+data_structure/hashset.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/hashset.c.o
+.PHONY : data_structure/hashset.c.o
+
+data_structure/hashset.i: data_structure/hashset.c.i
+.PHONY : data_structure/hashset.i
+
+# target to preprocess a source file
+data_structure/hashset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/hashset.c.i
+.PHONY : data_structure/hashset.c.i
+
+data_structure/hashset.s: data_structure/hashset.c.s
+.PHONY : data_structure/hashset.s
+
+# target to generate assembly for a file
+data_structure/hashset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/hashset.c.s
+.PHONY : data_structure/hashset.c.s
+
+data_structure/queue.o: data_structure/queue.c.o
+.PHONY : data_structure/queue.o
+
+# target to build an object file
+data_structure/queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/queue.c.o
+.PHONY : data_structure/queue.c.o
+
+data_structure/queue.i: data_structure/queue.c.i
+.PHONY : data_structure/queue.i
+
+# target to preprocess a source file
+data_structure/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/queue.c.i
+.PHONY : data_structure/queue.c.i
+
+data_structure/queue.s: data_structure/queue.c.s
+.PHONY : data_structure/queue.s
+
+# target to generate assembly for a file
+data_structure/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn.dir/build.make CMakeFiles/learn.dir/data_structure/queue.c.s
+.PHONY : data_structure/queue.c.s
+
 data_structure/stack.o: data_structure/stack.c.o
 .PHONY : data_structure/stack.o
 
@@ -234,6 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... learn"
+	@echo "... data_structure/hashset.o"
+	@echo "... data_structure/hashset.i"
+	@echo "... data_structure/hashset.s"
+	@echo "... data_structure/queue.o"
+	@echo "... data_structure/queue.i"
+	@echo "... data_structure/queue.s"
 	@echo "... data_structure/stack.o"
 	@echo "... data_structure/stack.i"
 	@echo "... data_structure/stack.s"

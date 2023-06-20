@@ -52,7 +52,7 @@ void stack_destroy();
 /**
  * if the stack is empty.
  */
-bool isEmpty();
+bool stack_isEmpty();
 
 #endif //LEARN_STACK_H
 

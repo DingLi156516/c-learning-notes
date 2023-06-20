@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include "data_structure/stack.h"
 #include "data_structure/string.h"
+#include "data_structure/queue.h"
+#include "data_structure/hashset.h"
 
 #define TAXRATE 0.015
 
@@ -89,10 +91,60 @@ struct MyStruct {
     int m_aNumber;
     float num2;
 };
+void hashset_contains(MyHashSet* myHashSet, int val) {
+    if (myHashSetContains(myHashSet, val)) {
+        printf("hashset contains %d\n", val);
+    } else {
+        printf("hashset doesn't contain %d\n", val);
+    }
+}
+void hashset_test() {
+    printf("\n");
+    printf("*************************hashset test start******************************\n");
+
+    MyHashSet* myHashSet = myHashSetCreate();
+    myHashSetAdd(myHashSet, 1);
+    myHashSetAdd(myHashSet, 1);
+    myHashSetAdd(myHashSet, 2);
+    myHashSetAdd(myHashSet, 3);
+    myHashSetAdd(myHashSet, 4);
+    hashset_contains(myHashSet, 1);
+    hashset_contains(myHashSet, 3);
+    myHashSetRemove(myHashSet, 1);
+    hashset_contains(myHashSet, 1);
+
+    myHashSetFree(myHashSet);
+    printf("*************************hashset test end******************************\n");
+    printf("\n");
+}
+
+void queue_test() {
+    printf("\n");
+    printf("*************************queue test start******************************\n");
+
+    Queue* queue = createQueue();
+    initQueue(queue);
+    enqueue(queue, 1);
+    enqueue(queue, 2);
+    enqueue(queue, 3);
+    enqueue(queue, 4);
+    printf("Top element of queue: %d", front(queue));
+    printQueue(queue);
+
+    dequeue(queue);
+    printQueue(queue);
+    while (!isEmpty(queue)) {
+        dequeue(queue);
+    }
+    dequeue(queue);
+    freeQueue(queue);
+    printf("*************************queue test end******************************\n");
+    printf("\n");
+}
 
 void stack_test() {
-    printf("*************************stack test start******************************\n");
     printf("\n");
+    printf("*************************stack test start******************************\n");
     stack_init();
     struct Node node1 = {.data = 1};
     struct Node node2 = {.data = 2};
@@ -112,10 +164,11 @@ void stack_test() {
     printf("pop value: %d\n", pop_value1->data);
     printf("pop value: %d\n", pop_value2->data);
     printf("pop value: %d\n", pop_value3->data);
-    printf("is empty: %s\n", isEmpty() ? "true" : "false");
+    printf("is empty: %s\n", stack_isEmpty() ? "true" : "false");
 
     stack_destroy();
     printf("*************************stack test end******************************\n");
+    printf("\n");
 }
 
 void copyString(char *to, char *from) {
@@ -162,7 +215,10 @@ int main() {
     testEnum();
     // stack test
     stack_test();
-
+    // queue test
+    queue_test();
+    // hashset test
+    hashset_test();
     // string test
 //    char input[100];
 //    printf("Please input your name: ");

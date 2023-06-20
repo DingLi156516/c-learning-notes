@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/learn.dir/data_structure/hashset.c.o"
+  "CMakeFiles/learn.dir/data_structure/hashset.c.o.d"
+  "CMakeFiles/learn.dir/data_structure/queue.c.o"
+  "CMakeFiles/learn.dir/data_structure/queue.c.o.d"
   "CMakeFiles/learn.dir/data_structure/stack.c.o"
   "CMakeFiles/learn.dir/data_structure/stack.c.o.d"
   "CMakeFiles/learn.dir/data_structure/string.c.o"

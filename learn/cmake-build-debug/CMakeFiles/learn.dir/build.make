@@ -125,12 +125,42 @@ CMakeFiles/learn.dir/data_structure/string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/learn.dir/data_structure/string.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/string.c" -o CMakeFiles/learn.dir/data_structure/string.c.s
 
+CMakeFiles/learn.dir/data_structure/queue.c.o: CMakeFiles/learn.dir/flags.make
+CMakeFiles/learn.dir/data_structure/queue.c.o: /Applications/Old\ MAC/CS/C/c-learning-notes/learn/data_structure/queue.c
+CMakeFiles/learn.dir/data_structure/queue.c.o: CMakeFiles/learn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Applications/Old MAC/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/learn.dir/data_structure/queue.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/learn.dir/data_structure/queue.c.o -MF CMakeFiles/learn.dir/data_structure/queue.c.o.d -o CMakeFiles/learn.dir/data_structure/queue.c.o -c "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.c"
+
+CMakeFiles/learn.dir/data_structure/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/learn.dir/data_structure/queue.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.c" > CMakeFiles/learn.dir/data_structure/queue.c.i
+
+CMakeFiles/learn.dir/data_structure/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/learn.dir/data_structure/queue.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/queue.c" -o CMakeFiles/learn.dir/data_structure/queue.c.s
+
+CMakeFiles/learn.dir/data_structure/hashset.c.o: CMakeFiles/learn.dir/flags.make
+CMakeFiles/learn.dir/data_structure/hashset.c.o: /Applications/Old\ MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c
+CMakeFiles/learn.dir/data_structure/hashset.c.o: CMakeFiles/learn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Applications/Old MAC/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/learn.dir/data_structure/hashset.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/learn.dir/data_structure/hashset.c.o -MF CMakeFiles/learn.dir/data_structure/hashset.c.o.d -o CMakeFiles/learn.dir/data_structure/hashset.c.o -c "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c"
+
+CMakeFiles/learn.dir/data_structure/hashset.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/learn.dir/data_structure/hashset.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c" > CMakeFiles/learn.dir/data_structure/hashset.c.i
+
+CMakeFiles/learn.dir/data_structure/hashset.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/learn.dir/data_structure/hashset.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Applications/Old MAC/CS/C/c-learning-notes/learn/data_structure/hashset.c" -o CMakeFiles/learn.dir/data_structure/hashset.c.s
+
 # Object files for target learn
 learn_OBJECTS = \
 "CMakeFiles/learn.dir/main.c.o" \
 "CMakeFiles/learn.dir/negate.c.o" \
 "CMakeFiles/learn.dir/data_structure/stack.c.o" \
-"CMakeFiles/learn.dir/data_structure/string.c.o"
+"CMakeFiles/learn.dir/data_structure/string.c.o" \
+"CMakeFiles/learn.dir/data_structure/queue.c.o" \
+"CMakeFiles/learn.dir/data_structure/hashset.c.o"
 
 # External object files for target learn
 learn_EXTERNAL_OBJECTS =
@@ -139,9 +169,11 @@ learn: CMakeFiles/learn.dir/main.c.o
 learn: CMakeFiles/learn.dir/negate.c.o
 learn: CMakeFiles/learn.dir/data_structure/stack.c.o
 learn: CMakeFiles/learn.dir/data_structure/string.c.o
+learn: CMakeFiles/learn.dir/data_structure/queue.c.o
+learn: CMakeFiles/learn.dir/data_structure/hashset.c.o
 learn: CMakeFiles/learn.dir/build.make
 learn: CMakeFiles/learn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Applications/Old MAC/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable learn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Applications/Old MAC/CS/C/c-learning-notes/learn/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable learn"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/learn.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
